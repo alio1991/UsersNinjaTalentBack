@@ -2,7 +2,7 @@ const User = require("../models/user-model");
 const jwt = require('jsonwebtoken')
 
 
-
+const countries = [ 'ES', 'UK', 'DE', 'US' ];
 
 // CREATE NEW USER
 exports.post = (req, res) => {
@@ -70,4 +70,10 @@ exports.delete = (req, res) => {
     res.send('Deleted user with id:' + req.params.id);
     return
   })
+};
+
+//GET
+exports.getCountries = (req, res) => {
+  console.log('GET Countries');
+  res.send(countries);
 };
