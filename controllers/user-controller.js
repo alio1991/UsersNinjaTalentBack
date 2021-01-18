@@ -26,9 +26,6 @@ exports.post = (req, res) => {
 };
 
 
-//-------------------------------------------------------------------------------------------
-
-
 //GET
 exports.get = (req, res) => {
   console.log('GET All');
@@ -38,7 +35,7 @@ exports.get = (req, res) => {
   })
 };
 
-// GET by email
+// GET by id
 exports.getOne = (req, res) => {
   console.log('GET ' + req.params.id);
   User.findById(req.params.id, function (err, product) {
@@ -72,7 +69,7 @@ exports.delete = (req, res) => {
   })
 };
 
-//GET
+//GET Countries
 exports.getCountries = (req, res) => {
   console.log('GET Countries');
   res.send(countries);
